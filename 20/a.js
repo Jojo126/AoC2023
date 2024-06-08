@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         
         // Parse modules
         let modules = input.split('\r\n').reduce((acc, rule) => {
@@ -93,6 +93,7 @@ async function example() {
         }
         //console.log('Cycle repeats after', i, 'highs', highs, 'lows', lows);
         
+        i = i === 0 ? 1 : i;
         lows *= Math.floor(1000/i);
         highs *= Math.floor(1000/i);
         let j = 0;

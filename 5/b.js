@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        let input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        let input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
 
         /* Part 2 */
         

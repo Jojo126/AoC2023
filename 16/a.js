@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         let grid = input.split('\r\n').map(row => row.split('').map(char => {
             return {
                 char: char,

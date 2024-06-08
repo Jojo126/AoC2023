@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
 
         let grid = input.split('\r\n');
         
@@ -34,7 +34,8 @@ async function example() {
 
         // Get all unique pairs expanded distances
         let pairs = [];
-        let expandFact = 1000000;
+        let expandFact = 10; // Example input
+        //let expandFact = 1000000;
         for(let a = 0; a < galaxies.length; a++) {
             for(let b = a + 1; b < galaxies.length; b++) {
                 let colsToExpand = expandCols.filter(expCol => Math.min(galaxies[a].col,galaxies[b].col) < expCol && expCol < Math.max(galaxies[a].col,galaxies[b].col));

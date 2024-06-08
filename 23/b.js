@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         let map = input.split('\r\n');
         //console.log(map);
 
@@ -182,8 +182,7 @@ async function example() {
         // Returns the longest path between found valid paths
         const findLongestPath = (path, length) => {
             // Base-case: found the end
-            //if(path.at(-1) === '22,21') {
-            if(path.at(-1) === '140,139') {
+            if(path.at(-1) === '22,21') {
                 return [path, length];
             }
 

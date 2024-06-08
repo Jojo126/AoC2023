@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         const bricks = input.split('\r\n').map((brick, index) => {
             const endpoints = brick.split('~').map(coord => {
                 const vals = coord.split(',');

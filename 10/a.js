@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
 
         const grid = input.split('\r\n');
         let rows = grid.length;
@@ -17,8 +17,11 @@ async function example() {
 
         // Start from both ends of S
         let steps = 1;
-        let end1 = {coords: [start[0],start[1]-1], prevDir: 'R'};
-        let end2 = {coords: [start[0]-1,start[1]], prevDir: 'D'};
+        //let end1 = {coords: [start[0],start[1]-1], prevDir: 'R'};
+        //let end2 = {coords: [start[0]-1,start[1]], prevDir: 'D'};
+        // Loop ends for example input
+        let end1 = {coords: [start[0],start[1]+1], prevDir: 'L'};
+        let end2 = {coords: [start[0]+1,start[1]], prevDir: 'U'};
 
         // Step through the loop
         const move = (coord, prevDir) => {

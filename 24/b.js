@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         const hailstones = input.split('\r\n').map(hailstone => {
             const [pos, vel] = hailstone.split('@');
             const posCoords = pos.split(',');

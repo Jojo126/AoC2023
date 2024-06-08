@@ -1,14 +1,13 @@
 /* Part 1 */
 
-const input = `Time:        51     69     98     78
-Distance:   377   1171   1224   1505`;
+const input = `Time:      7  15   30
+Distance:  9  40  200`;
 
 
 const races = [
-    {time: 51, distance: 377},
-    {time: 69, distance: 1171},
-    {time: 98, distance: 1224},
-    {time: 78, distance: 1505}
+    {time: 7, distance: 9},
+    {time: 15, distance: 40},
+    {time: 30, distance: 200}
 ];
 
 races.map(race => {

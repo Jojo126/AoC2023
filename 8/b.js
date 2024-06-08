@@ -2,7 +2,7 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example3_input.txt', { encoding: 'utf8' });
         
         let parsedInput = {
             roadToGlory: input.split('\n')[0].trim()
@@ -63,8 +63,10 @@ async function example() {
             }
             return comps;
         }
-        console.log(res, res.map(val => getPrims(val))); // [[ 59, 269 ],[ 73, 269 ],[ 47, 269 ],[ 53, 269 ],[ 79, 269 ],[ 71, 269 ]]
+        console.log(res, res.map(val => getPrims(val))); 
+        // [[ 59, 269 ],[ 73, 269 ],[ 47, 269 ],[ 53, 269 ],[ 79, 269 ],[ 71, 269 ]]
         // -> LCM = [59, 73, 47, 53, 79, 71, 269] // === 16187743689077!
+        // Example input: -> LCM [2, 3] -> === 6!
 
     } catch (err) {
         console.log(err);

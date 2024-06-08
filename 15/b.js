@@ -8,7 +8,7 @@ const getBoxNumber = (label) => {
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         
         // Get lenses from steps
         let lenses = input.split(',').map(step => {

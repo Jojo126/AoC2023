@@ -2,11 +2,11 @@ const fs = require('node:fs/promises');
 
 async function example() {
     try {
-        const input = await fs.readFile('./input.txt', { encoding: 'utf8' });
+        const input = await fs.readFile('./example_input.txt', { encoding: 'utf8' });
         
         const map = input.split('\r\n');
 
-        const STEPS = 64;
+        const STEPS = 6;
         let elfPosition;
         for(let i = 0; i < map.length; i++) {
             for(let j = 0; j < map[i].length; j++) {

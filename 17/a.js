@@ -145,7 +145,7 @@ async function example() {
             backtrackingNode = backtrackingNode.parent;
         }
         console.log('back', closedList.at(0).coord, '\t', {f: 0, g: 0, h: getManhattanDist(start, goal)}, '\t\t', 0, closedList.at(0).dir);
-        console.log(openList.length)
+        //console.log(openList.length)
 
     } catch (err) {
         console.log(err);

@@ -1,8 +1,7 @@
 /* Part 2 */
 
 const races = [
-    //{time: 71530, distance: 940200}
-    {time: 51699878, distance: 377117112241505}
+    {time: 71530, distance: 940200}
 ];
 
 const getRange = (time) => {
